@@ -1,0 +1,97 @@
+body{
+    font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--very-dark-blue-bg);
+}
+main{
+    margin: auto;
+    margin-top: 2rem;
+    max-width: 80%;
+    display: grid;
+    row-gap: 2.5rem;
+    color: var(--blue-txt);
+}
+h2, h3{
+    color: var(--white-txt);
+}
+p{
+    font-size: 0.8rem;
+}
+.first-section{
+    &__top{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__bottom{
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+        gap: 1rem;
+
+        .first-section-card{
+            background-color: var(--dark-blue-card);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            row-gap: 0rem;
+            padding: 1.5rem 0 1rem 0;
+            font-size: 0.9rem;
+
+            div:first-child{
+                display: flex;
+                align-items: center;
+                column-gap: 0.5rem;
+                margin-bottom: 0.8rem;
+            }
+            div:nth-of-type(2){
+                font-size: 2.5rem;
+                color: var(--white-txt);
+            }
+            div:nth-of-type(3){
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+            div:last-child{
+                margin-top: 1rem;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
+.second-section{
+    &__bottom{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 1rem;
+        margin-top: 1.2rem;
+
+        .second-section-card{
+            background-color: var(--dark-blue-card);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 1rem 1.3rem 1rem 1.2rem;
+
+            div:first-child{
+                font-size: 0.8rem;
+            }
+
+            div:nth-of-type(2), div:last-child{
+                justify-self: flex-end;
+            }
+            div:nth-of-type(3){
+                margin-top: 1.8rem;
+                font-size: 1.6rem;
+                color: var(--white-txt);
+            }
+            div:last-child{
+                margin-top: 1.8rem;
+                align-self: flex-end;
+                font-size: 0.7rem;
+            }
+        }
+    }
+}

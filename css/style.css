@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --very-dark-blue: hsl(230, 17%, 14%);
+  --very-dark-blue-bg: hsl(232, 19%, 15%);
+  --dark-blue-card: hsl(228, 28%, 20%);
+  --blue-txt: hsl(228, 34%, 66%);
+  --white-txt: hsl(0, 0%, 100%);
+  --txt-white: hsl(0, 0%, 100%);
+  --pale-blue-bg: hsl(225, 100%, 98%);
+  --light-blue-card: hsl(227, 47%, 96%);
+  --txt-dark-gray-blue: hsl(228, 12%, 44%);
+  --txt-very-dark-blue: hsl(230, 17%, 14%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--very-dark-blue-bg);
+}
+
+main {
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 80%;
+  display: grid;
+  row-gap: 2.5rem;
+  color: var(--blue-txt);
+}
+
+h2, h3 {
+  color: var(--white-txt);
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+.first-section__top {
+  display: flex;
+  justify-content: space-between;
+}
+.first-section__bottom {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+}
+.first-section__bottom .first-section-card {
+  background-color: var(--dark-blue-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 0rem;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 0.9rem;
+}
+.first-section__bottom .first-section-card div:first-child {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+.first-section__bottom .first-section-card div:nth-of-type(2) {
+  font-size: 2.5rem;
+  color: var(--white-txt);
+}
+.first-section__bottom .first-section-card div:nth-of-type(3) {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.first-section__bottom .first-section-card div:last-child {
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.second-section__bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.second-section__bottom .second-section-card {
+  background-color: var(--dark-blue-card);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem 1.3rem 1rem 1.2rem;
+}
+.second-section__bottom .second-section-card div:first-child {
+  font-size: 0.8rem;
+}
+.second-section__bottom .second-section-card div:nth-of-type(2), .second-section__bottom .second-section-card div:last-child {
+  justify-self: flex-end;
+}
+.second-section__bottom .second-section-card div:nth-of-type(3) {
+  margin-top: 1.8rem;
+  font-size: 1.6rem;
+  color: var(--white-txt);
+}
+.second-section__bottom .second-section-card div:last-child {
+  margin-top: 1.8rem;
+  align-self: flex-end;
+  font-size: 0.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
