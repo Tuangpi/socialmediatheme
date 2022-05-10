@@ -1,23 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-:root {
-  --lime-green: hsl(163, 72%, 41%);
-  --bright-red: hsl(356, 69%, 56%);
-  --very-dark-blue: hsl(230, 17%, 14%);
-  --very-dark-blue-bg: hsl(232, 19%, 15%);
-  --dark-blue-card: hsl(228, 28%, 20%);
-  --blue-txt: hsl(228, 34%, 66%);
-  --white-txt: hsl(0, 0%, 100%);
-  --txt-white: hsl(0, 0%, 100%);
-  --pale-blue-bg: hsl(225, 100%, 98%);
-  --light-blue-card: hsl(227, 47%, 96%);
-  --txt-dark-gray-blue: hsl(228, 12%, 44%);
-  --txt-very-dark-blue: hsl(230, 17%, 14%);
-  --facebook: hsl(208, 92%, 53%);
-  --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-  --youtube: hsl(348, 97%, 39%);
-}
-
 *,
 *::after,
 *::before {
@@ -27,10 +8,29 @@
 }
 
 body {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --very-dark-blue: hsl(230, 17%, 14%);
+  --very-dark-blue-bg: hsl(232, 19%, 15%);
+  --dark-blue-card: hsl(228, 28%, 20%);
+  --blue-txt: hsl(228, 34%, 66%);
+  --white-txt: hsl(0, 0%, 100%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
   font-family: Inter, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 16px;
   font-weight: 700;
   background-color: var(--very-dark-blue-bg);
+}
+
+body.white {
+  --white-txt: hsl(0, 0%, 100%);
+  --very-dark-blue-bg: hsl(225, 100%, 98%);
+  --dark-blue-card: hsl(227, 47%, 96%);
+  --txt-dark-gray-blue: hsl(228, 12%, 44%);
+  --white-txt: hsl(230, 17%, 14%);
 }
 
 main {
@@ -106,6 +106,8 @@ p {
   padding: 1.5rem 0 1rem 0;
   font-size: 0.9rem;
   cursor: pointer;
+  position: relative;
+  border-radius: 6px;
 }
 .first-section__bottom .first-section-card div:first-child {
   display: flex;
@@ -133,6 +135,28 @@ p {
 }
 .first-section__bottom .first-section-card .status {
   color: var(--bright-red) !important;
+}
+.first-section__bottom .first-section-card::before {
+  content: "";
+  position: absolute;
+  width: 99%;
+  height: 0.2em;
+  top: 0;
+  left: 0.1em;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.first-section__bottom .facebook::before {
+  background-color: var(--facebook);
+}
+.first-section__bottom .twitter::before {
+  background-color: var(--twitter);
+}
+.first-section__bottom .instagram::before {
+  background: var(--instagram);
+}
+.first-section__bottom .youtube::before {
+  background-color: var(--youtube);
 }
 .first-section__bottom .first-section-card:hover {
   background-color: #323958;
