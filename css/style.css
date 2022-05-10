@@ -42,7 +42,8 @@ main {
   color: var(--blue-txt);
 }
 
-h2, h3 {
+h2,
+h3 {
   color: var(--white-txt);
 }
 
@@ -53,6 +54,41 @@ p {
 .first-section__top {
   display: flex;
   justify-content: space-between;
+}
+.first-section__top div:last-child {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+}
+.first-section__top div:last-child .white-txt {
+  color: var(--white-txt);
+  font-size: 0.8rem;
+}
+.first-section__top div:last-child .change-mode {
+  position: relative;
+  width: 3em;
+  height: 1.5em;
+  appearance: unset;
+  background: linear-gradient(45deg, #126e54, #118866, #24dba7);
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.first-section__top div:last-child .change-mode::after {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: var(--very-dark-blue);
+  border-radius: 50%;
+  outline: none;
+  top: 0.15em;
+  left: 0.2em;
+}
+.first-section__top div:last-child .change-mode:checked::after {
+  left: 1.55em;
+  background-color: var(--white-txt);
 }
 .first-section__bottom {
   margin-top: 2rem;
@@ -69,6 +105,7 @@ p {
   row-gap: 0rem;
   padding: 1.5rem 0 1rem 0;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 .first-section__bottom .first-section-card div:first-child {
   display: flex;
@@ -89,6 +126,16 @@ p {
 .first-section__bottom .first-section-card div:last-child {
   margin-top: 1rem;
   font-size: 0.7rem;
+  color: var(--lime-green);
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.first-section__bottom .first-section-card .status {
+  color: var(--bright-red) !important;
+}
+.first-section__bottom .first-section-card:hover {
+  background-color: #323958;
 }
 
 .second-section__bottom {
@@ -102,11 +149,13 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 1rem 1.3rem 1rem 1.2rem;
+  cursor: pointer;
 }
 .second-section__bottom .second-section-card div:first-child {
   font-size: 0.8rem;
 }
-.second-section__bottom .second-section-card div:nth-of-type(2), .second-section__bottom .second-section-card div:last-child {
+.second-section__bottom .second-section-card div:nth-of-type(2),
+.second-section__bottom .second-section-card div:last-child {
   justify-self: flex-end;
 }
 .second-section__bottom .second-section-card div:nth-of-type(3) {
@@ -118,6 +167,16 @@ p {
   margin-top: 1.8rem;
   align-self: flex-end;
   font-size: 0.7rem;
+  color: var(--lime-green);
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+}
+.second-section__bottom .second-section-card .status {
+  color: var(--bright-red) !important;
+}
+.second-section__bottom .second-section-card:hover {
+  background-color: #323958;
 }
 
 /*# sourceMappingURL=style.css.map */
